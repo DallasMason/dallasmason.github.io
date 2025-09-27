@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dallas Mason — Resume</title>
+  <meta name="description" content="Resume of Dallas Mason — professional objective, education, experience, projects, skills, awards." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <div class="photo" aria-hidden="false">
+        <!-- Replace src with your professional picture (square preferred). -->
+        <img src="images/profile.jpg" alt="Professional photo of Dallas Mason" />
+      </div>
+      <div class="identity">
+        <h1 id="name">Dallas Mason</h1>
+        <p class="meta">
+          <a href="mailto:you@ucf.edu">you@ucf.edu</a> ·
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+        <p class="objective"><strong>Professional Objective</strong><br />
+        Seeking a summer internship in Information Technology where I can apply systems troubleshooting, scripting, and customer-focused support to improve operational reliability.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section aria-labelledby="education-heading" class="card">
+      <h2 id="education-heading">Education</h2>
+      <p><strong>University of Central Florida</strong> — Bachelor of Science, Information Technology (expected May 2026)</p>
+      <ul>
+        <li>GPA: 3.6</li>
+        <li>Relevant coursework: Computer Architecture, Networking, Web Development</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="experience-heading" class="card">
+      <h2 id="experience-heading">Relevant Work Experience</h2>
+      <article class="job" aria-labelledby="job1">
+        <h3 id="job1">Line Worker — Chipotle</h3>
+        <p class="job-meta">Feb 2025 — Present</p>
+        <p>Provided customer service and supported team operations. Gained experience coordinating tasks under time pressure, training new staff, and using POS systems.</p>
+      </article>
+      <!-- Add more jobs if you have them -->
+    </section>
+
+    <section aria-labelledby="projects-heading" class="card">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <ul class="project-list">
+        <li><a href="project1.html">Project One — Banking Simulator (Java)</a></li>
+        <li><a href="project2.html">Project Two — Hill Cipher Implementation (C++)</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="skills-heading" class="card">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills">
+        <li>Languages: Java, C++, Python, HTML/CSS</li>
+        <li>Tools: Git, GitHub, MARIE Simulator</li>
+        <li>Other: Troubleshooting, Teamwork, Accessibility-aware design</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="awards-heading" class="card">
+      <h2 id="awards-heading">Awards & Honors</h2>
+      <ul>
+        <li>Dean's List — Fall 2024</li>
+        <!-- Remove this section if you have nothing to report -->
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact-heading" class="card">
+      <h2 id="contact-heading">Contact</h2>
+      <p>If you'd like to see more work or contact me: <a href="mailto:you@ucf.edu">you@ucf.edu</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Dallas Mason — <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // small JS for current year and keyboard focus outline preference
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
