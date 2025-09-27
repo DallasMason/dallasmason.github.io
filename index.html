@@ -1,91 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dallas Mason — Resume</title>
-  <meta name="description" content="Resume of Dallas Mason — professional objective, education, experience, projects, skills, awards." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dallas Mason - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #222;
+    }
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.25rem 0;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #1e293b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .job {
+      margin-bottom: 1.5rem;
+    }
+    .job-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .job-dates {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container header-grid">
-      <div class="photo" aria-hidden="false">
-        <!-- Replace src with your professional picture (square preferred). -->
-        <img src="images/profile.jpg" alt="Professional photo of Dallas Mason" />
-      </div>
-      <div class="identity">
-        <h1 id="name">Dallas Mason</h1>
-        <p class="meta">
-          <a href="mailto:you@ucf.edu">you@ucf.edu</a> ·
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
-        <p class="objective"><strong>Professional Objective</strong><br />
-        Seeking a summer internship in Information Technology where I can apply systems troubleshooting, scripting, and customer-focused support to improve operational reliability.</p>
-      </div>
-    </div>
+  <header>
+    <h1>Dallas Mason</h1>
+    <p>(610) 766-1804 | <a href="mailto:da869902@ucf.edu" style="color:#93c5fd;">da869902@ucf.edu</a></p>
+    <p><a href="https://github.com/DallasMason" target="_blank" style="color:#93c5fd;">github.com/DallasMason</a></p>
   </header>
-
-  <main id="main" class="container" role="main">
-    <section aria-labelledby="education-heading" class="card">
-      <h2 id="education-heading">Education</h2>
-      <p><strong>University of Central Florida</strong> — Bachelor of Science, Information Technology (expected May 2026)</p>
+  <main>
+    <section>
+      <h2>Education</h2>
+      <p><strong>University of Central Florida</strong><br>
+      Bachelor of Science in Information Technology<br>
+      Expected Graduation: 2026<br>
+      GPA: 3.81</p>
+      <p>Completed IT Courses: Web-based IT, Frontiers in IT, Careers in IT, Fundamentals of IT</p>
       <ul>
-        <li>GPA: 3.6</li>
-        <li>Relevant coursework: Computer Architecture, Networking, Web Development</li>
+        <li>Distinguished Honor Roll Student (2016–2022)</li>
+        <li>Dean’s List (2022–2023)</li>
       </ul>
     </section>
 
-    <section aria-labelledby="experience-heading" class="card">
-      <h2 id="experience-heading">Relevant Work Experience</h2>
-      <article class="job" aria-labelledby="job1">
-        <h3 id="job1">Line Worker — Chipotle</h3>
-        <p class="job-meta">Feb 2025 — Present</p>
-        <p>Provided customer service and supported team operations. Gained experience coordinating tasks under time pressure, training new staff, and using POS systems.</p>
-      </article>
-      <!-- Add more jobs if you have them -->
-    </section>
-
-    <section aria-labelledby="projects-heading" class="card">
-      <h2 id="projects-heading">Selected Projects</h2>
-      <ul class="project-list">
-        <li><a href="project1.html">Project One — Banking Simulator (Java)</a></li>
-        <li><a href="project2.html">Project Two — Hill Cipher Implementation (C++)</a></li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="skills-heading" class="card">
-      <h2 id="skills-heading">Skills</h2>
-      <ul class="skills">
-        <li>Languages: Java, C++, Python, HTML/CSS</li>
-        <li>Tools: Git, GitHub, MARIE Simulator</li>
-        <li>Other: Troubleshooting, Teamwork, Accessibility-aware design</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="awards-heading" class="card">
-      <h2 id="awards-heading">Awards & Honors</h2>
+    <section>
+      <h2>Certifications</h2>
       <ul>
-        <li>Dean's List — Fall 2024</li>
-        <!-- Remove this section if you have nothing to report -->
+        <li>IT Fundamentals Pro Certification (2024)</li>
+        <li>Google Cybersecurity Certification (2025)</li>
+        <li>IBM IT & Cybersecurity Certification (2025)</li>
       </ul>
     </section>
 
-    <section aria-labelledby="contact-heading" class="card">
-      <h2 id="contact-heading">Contact</h2>
-      <p>If you'd like to see more work or contact me: <a href="mailto:you@ucf.edu">you@ucf.edu</a></p>
+    <section>
+      <h2>Skills</h2>
+      <p><strong>Proficient:</strong> Java, C, MySQL, VS Code, Replit, Excel, Word, PowerPoint, PowerShell, Google Docs/Sheets/Slides</p>
+      <p><strong>Basic:</strong> Python, Eclipse, PyCharm, MongoDB</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <p class="job-title">Freelance Design Services</p>
+        <p class="job-dates">March 2020 – Present</p>
+        <ul>
+          <li>Developed graphics using Adobe Photoshop, Illustrator, Premiere Pro, After Effects, Lightroom, and InDesign.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Delray Beach Market</p>
+        <p class="job-dates">June 2021 – Aug 2022</p>
+        <ul>
+          <li>Provided hospitality services to enhance guest experiences.</li>
+          <li>Assisted at the front desk and supported customers in need.</li>
+          <li>Managed call center operations and provided customer support.</li>
+          <li>Handled payment processing and customer transactions.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Palm Beach Electronics (Internship)</p>
+        <p class="job-dates">March 2024 – May 2024</p>
+        <ul>
+          <li>Assisted with on-site electrical wiring and IT support in the office.</li>
+          <li>Managed the server room and worked with multiple virtual machines.</li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© <span id="year"></span> Dallas Mason — <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-    </div>
+  <footer>
+    <p>© 2025 Dallas Mason | Resume Website</p>
   </footer>
-
-  <script>
-    // small JS for current year and keyboard focus outline preference
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
