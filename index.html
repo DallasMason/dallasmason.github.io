@@ -1,100 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dallas Mason - Resume</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dallas Mason - Portfolio</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e3d59;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffd460;
+      font-weight: bold;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      color: #f6f6f6;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #1e3d59;
+      border-bottom: 2px solid #ffd460;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    p, li {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 250px;
+      background-color: #e0e0e0;
+      border: 2px dashed #bbb;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem 0;
+      color: #666;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e3d59;
+      color: white;
+      margin-top: 2rem;
+      border-top: 4px solid #ffd460;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="profile">
-      <img src="images/profile.jpg" alt="Professional photo of Dallas Mason" class="profile-img" />
-      <div class="contact">
-        <h1>Dallas Mason</h1>
-        <p>(610) 766-1804 | <a href="mailto:da869902@ucf.edu">da869902@ucf.edu</a></p>
-        <p><a href="https://github.com/DallasMason" target="_blank">GitHub</a> | 
-           <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a></p>
-      </div>
-    </div>
+    <h1>Dallas Mason</h1>
+    <p>(610) 766-1804 | <a href="mailto:da869902@ucf.edu" style="color:#ffd460;">da869902@ucf.edu</a> | 
+    <a href="https://github.com/DallasMason" style="color:#ffd460;">GitHub</a></p>
     <nav>
-      <a href="index.html">Resume</a>
-      <a href="project1.html">Project 1</a>
-      <a href="project2.html">Project 2</a>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Professional Objective</h2>
-      <p>Motivated IT student with strong technical skills and hands-on experience seeking opportunities in cybersecurity, systems administration, or software development to apply my knowledge and grow professionally.</p>
-    </section>
+  <div class="container">
+    <h2>Welcome</h2>
+    <p>Hello! My name is Dallas Mason, and I’m an aspiring IT professional pursuing a Bachelor of Science in Information Technology at the University of Central Florida. This site highlights my skills, projects, and experience in the IT and cybersecurity fields.</p>
 
-    <section>
-      <h2>Education</h2>
-      <img src="images/ucf-logo.png" alt="UCF Logo" class="section-img" />
-      <p><strong>University of Central Florida</strong><br>
-      Bachelor of Science in Information Technology, Expected 2026<br>
-      GPA: 3.81</p>
-      <ul>
-        <li>Completed IT Courses: Web-based IT, Frontiers in IT, Careers in IT, Fundamentals of IT</li>
-        <li>Distinguished Honor Roll (2016–2022)</li>
-        <li>Dean’s List (2022–2023)</li>
-      </ul>
-    </section>
+    <div class="image-placeholder">Image Placeholder (e.g. Profile Photo)</div>
 
-    <section>
-      <h2>Certifications</h2>
-      <img src="images/certifications.png" alt="Certification icon" class="section-img" />
-      <ul>
-        <li>IT Fundamentals Pro Certification (2024)</li>
-        <li>Google Cybersecurity Certification (2025)</li>
-        <li>IBM IT & Cybersecurity Certification (2025)</li>
-      </ul>
-    </section>
+    <h2>About Me</h2>
+    <p>I have a strong foundation in IT, with certifications in IT Fundamentals, Google Cybersecurity, and IBM IT & Cybersecurity. My experience includes hands-on projects with programming, databases, and IT support roles, as well as freelance design work.</p>
 
-    <section>
-      <h2>Skills</h2>
-      <img src="images/skills.png" alt="Skills icon" class="section-img" />
-      <p><strong>Proficient:</strong> Java, C, MySQL, VS Code, Replit, Excel, Word, PowerPoint, PowerShell, Google Docs/Sheets/Slides</p>
-      <p><strong>Basic:</strong> Python, Eclipse, PyCharm, MongoDB</p>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-      <img src="images/experience.png" alt="Experience icon" class="section-img" />
-
-      <article>
-        <h3>Freelance Design Services</h3>
-        <p><em>March 2020 – Present</em></p>
-        <ul>
-          <li>Developed graphics using Adobe Photoshop, Illustrator, Premiere Pro, After Effects, Lightroom, and InDesign.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Delray Beach Market</h3>
-        <p><em>June 2021 – Aug 2022</em></p>
-        <ul>
-          <li>Provided hospitality services to enhance guest experiences.</li>
-          <li>Managed call center operations and supported customers.</li>
-          <li>Handled payment processing and customer transactions.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Palm Beach Electronics (Internship)</h3>
-        <p><em>March 2024 – May 2024</em></p>
-        <ul>
-          <li>Assisted with electrical wiring and IT support in the office.</li>
-          <li>Managed server room and worked with multiple virtual machines.</li>
-        </ul>
-      </article>
-    </section>
-  </main>
+    <div class="image-placeholder">Image Placeholder (e.g. Project Screenshot)</div>
+  </div>
 
   <footer>
-    <p>© 2025 Dallas Mason | Resume Website</p>
+    <p>© 2025 Dallas Mason | Portfolio Website</p>
   </footer>
+
 </body>
 </html>
