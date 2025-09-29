@@ -126,8 +126,20 @@ ul li::before {
   font-weight: bold;
 }
 
+
+/* Profile Photo */
+.profile-pic {
+  width: 250px;         /* Bigger size */
+  height: 250px;        /* Keep it square */
+  border-radius: 50%;   /* Circular */
+  border: 5px solid #ffd700; /* Gold border */
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  object-fit: cover;    /* Ensure it fills the box without stretching */
+}
+
 /* Project Images */
-.project-img, .profile-pic {
+.project-img {
   max-width: 100%;
   display: block;
   margin: 15px auto;
