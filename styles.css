@@ -1,115 +1,104 @@
-/* styles.css — mobile-first, semantic, accessible */
-
-/* Basic reset and sensible defaults */
-:root{
-  --bg: #ffffff;
-  --card-bg: #f8f9fa;
-  --text: #0b0b0b;
-  --muted: #475569;
-  --accent: #0b5fff;
-  --radius: 10px;
-  --max-width: 900px;
-  --container-padding: 1rem;
-  --focus-outline: 3px solid #ffcc00;
-  --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  --line-height: 1.45;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:var(--font-stack);
-  color:var(--text);
-  background:var(--bg);
-  line-height:var(--line-height);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  padding: 1rem;
-}
-
-/* Container to center content */
-.container{
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:var(--container-padding);
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
 /* Header */
-.site-header{
-  margin-bottom:1rem;
-}
-.header-grid{
-  display:grid;
-  grid-template-columns: 100px 1fr;
-  gap:1rem;
-  align-items:center;
-}
-.photo img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:12px;
-  object-fit:cover;
-  aspect-ratio:1/1;
-  border:2px solid rgba(0,0,0,0.06);
+header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Identity block */
-.identity h1{
-  margin:0 0 0.25rem 0;
-  font-size:1.5rem;
+header h1 {
+  font-size: 2.5em;
+  margin-top: 10px;
+  color: #2c3e50;
 }
-.meta a{color:var(--accent)}
-.objective{margin-top:0.5rem;color:var(--muted)}
 
-/* Cards */
-.card{
-  background:var(--card-bg);
-  padding:1rem;
-  border-radius:var(--radius);
-  margin-bottom:1rem;
-  box-shadow: 0 1px 6px rgba(16,24,40,0.05);
+header p a {
+  color: #2980b9;
+  text-decoration: none;
+  margin: 0 5px;
 }
-.card h2{margin-top:0}
 
-/* Project list and links */
-.project-list{list-style:none;padding-left:0;margin:0}
-.project-list li{margin:0.5rem 0}
-.project-list a{color:var(--accent);text-decoration:none}
-.project-list a:focus,
-.project-list a:hover{text-decoration:underline}
+header p a:hover {
+  text-decoration: underline;
+}
 
-/* Skills */
-.skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding-left:0;margin:0}
-.skills li{background:white;padding:.4rem .6rem;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  border: 3px solid #2980b9;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a:hover {
+  color: #2980b9;
+}
+
+/* Sections */
+section {
+  margin-bottom: 25px;
+}
+
+h2 {
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+.date {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.project-img {
+  max-width: 100%;
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+}
 
 /* Footer */
-.site-footer{margin-top:1rem;padding-top:0.5rem;font-size:0.9rem;color:var(--muted)}
-
-/* Responsive tweaks */
-@media (max-width:700px){
-  .header-grid{grid-template-columns: 80px 1fr}
-  .identity h1{font-size:1.25rem}
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
 }
-
-/* Focus outlines for keyboard users */
-:focus{outline: none}
-a:focus-visible, button:focus-visible, input:focus-visible{
-  outline: var(--focus-outline);
-  outline-offset:3px;
-  border-radius:6px;
-}
-
-/* Accessibility helpers */
-.sr-only{
-  position:absolute!important;
-  height:1px;width:1px;
-  overflow:hidden;
-  clip:rect(1px,1px,1px,1px);
-  white-space:nowrap;
-}
-
-/* Images in project pages */
-.project figure{margin:0 0 1rem 0}
-.project img{max-width:100%;height:auto;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
