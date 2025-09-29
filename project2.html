@@ -3,38 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2 - Dallas Mason</title>
+  <title>Dallas Mason - Project 2</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Project 2 Title</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="project1.html">Project 1</a>
-      <a href="project2.html">Project 2</a>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <img src="images/project2.jpg" alt="Project 2 Image" class="project-img">
-      <h2>Description</h2>
-      <p>[Write a description of your project here.]</p>
-    </section>
+<!-- HEADER WITH NAME -->
+<header>
+  <div class="header-container">
+    <h1>Dallas Mason</h1>
+  </div>
+</header>
 
-    <section>
-      <h2>Skills Learned</h2>
-      <ul>
-        <li>[Skill 1]</li>
-        <li>[Skill 2]</li>
-        <li>[Skill 3]</li>
-      </ul>
-    </section>
-  </main>
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">Resume</a>
+  <a href="project1.html">Project 1</a>
+  <a href="project2.html">Project 2</a>
+</nav>
 
-  <footer>
-    <p>Dallas Mason</p>
-  </footer>
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <section>
+    <h2>Railfence Encryption</h2>
+    <img src="images/project2.jpg" alt="Railfence Encryption Screenshot" class="project-img">
+    <p>
+      This C program implements the Railfence Cipher encryption method. 
+      It reads a user-specified number of messages, then encrypts each using a zigzag pattern on a grid of N rows, 
+      applying a starting row shift for added complexity.
+    </p>
+    <p>
+      Developed for CIS3362 at the University of Central Florida.
+    </p>
+
+    <h3>Features:</h3>
+    <ul>
+      <li>Encrypts messages using the Railfence Cipher with user-defined rows and starting row.</li>
+      <li>Supports multiple messages in a single run.</li>
+      <li>Handles newline characters and ensures proper null termination of output.</li>
+      <li>Implements a flexible row-mapping system for added encryption variation.</li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <p>Input the number of messages, followed by the number of rows, starting row, and message text. The program outputs the encrypted message for each input.</p>
+
+    <h3>Skills Learned:</h3>
+    <ul>
+      <li>C programming (arrays, strings, and nested loops)</li>
+      <li>Understanding and implementing the Railfence Cipher algorithm</li>
+      <li>Input validation and handling multiple messages</li>
+      <li>Memory management and string manipulation in C</li>
+      <li>Algorithmic thinking for encryption methods</li>
+    </ul>
+
+    <h3>GitHub Repository:</h3>
+    <p>
+      <a href="https://github.com/DallasMason/YourRailfenceRepo" target="_blank">View Project on GitHub</a>
+    </p>
+
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Dallas Mason. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
