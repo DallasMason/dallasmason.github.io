@@ -24,12 +24,58 @@
 
 <!-- MAIN CONTENT -->
 <div class="container">
+
   <section>
-    <h2>Project 1 Title</h2>
-    <img src="images/project1.jpg" alt="Project 1 Image" class="project-img">
-    <p>Description of Project 1 goes here...</p>
-    <p>Skills learned: Example skills</p>
+    <h2>Checksum Calculator (pa02)</h2>
+    <img src="images/project1.jpg" alt="Checksum Calculator Screenshot" class="project-img">
+    <p>
+      This C program calculates the checksum of a given input file using either 8-bit, 16-bit, or 32-bit checksums. 
+      The program reads an ASCII text file, pads it if necessary, and computes the checksum according to the 
+      user-specified bit size.
+    </p>
+    <p>
+      Developed for CIS3360 - Security in Computing (Spring 2025) at the University of Central Florida.
+    </p>
+    <h3>Features:</h3>
+    <ul>
+      <li>Supports 8-bit, 16-bit, and 32-bit checksum calculations.</li>
+      <li>Handles file reading and padding as required.</li>
+      <li>Formats and displays input and checksum clearly.</li>
+      <li>Designed for 8-bit ASCII input files.</li>
+    </ul>
+
+    <h3>Compilation:</h3>
+    <p>To compile the program, use gcc:</p>
+    <pre>gcc -o pa02 pa02.c</pre>
+
+    <h3>Usage:</h3>
+    <p>Run the program as follows:</p>
+    <pre>./pa02 inputFilename.txt checksumSize</pre>
+    <p>
+      <strong>inputFilename.txt</strong>: The name of the input text file (must exist).<br>
+      <strong>checksumSize</strong>: One of the following values: 8, 16, or 32.
+    </p>
+
+    <h3>Example:</h3>
+    <pre>./pa02 example.txt 16</pre>
+    <p>Output format: Prints the file content (padded with 'X' if needed) in 80-character lines, followed by the computed checksum in hexadecimal format and total characters processed.</p>
+
+    <h3>Skills Learned:</h3>
+    <ul>
+      <li>C programming (file I/O, data processing)</li>
+      <li>Checksum computation for multiple bit sizes</li>
+      <li>Handling input validation and error checking</li>
+      <li>Formatted output in C</li>
+      <li>Understanding padding and alignment requirements</li>
+    </ul>
+
+    <h3>GitHub Repository:</h3>
+    <p>
+      <a href="https://github.com/DallasMason/CalcChecksum-" target="_blank">View Project on GitHub</a>
+    </p>
+
   </section>
+
 </div>
 
 <!-- FOOTER -->
