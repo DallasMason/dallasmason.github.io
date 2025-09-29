@@ -7,26 +7,30 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f4f8;
-  color: #333;
+  background: #ffffff; /* White background */
+  color: #0d1f3c; /* Dark blue text */
   line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #003366, #0055a5);
-  color: #fff;
+  background: #0d1f3c; /* Dark blue header */
+  color: #ffffff;
   text-align: center;
   padding: 40px 20px;
 }
 
 header img {
-  width: 150px;
-  height: 150px;
+  width: 250px; /* Bigger profile photo */
+  height: 250px;
   border-radius: 50%;
-  border: 4px solid #ffd700;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 5px solid #ffffff; /* White border */
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
 }
 
 header h1 {
@@ -40,7 +44,7 @@ header p {
 }
 
 header a {
-  color: #ffd700;
+  color: #ffd700; /* Accent color for links */
   text-decoration: none;
   font-weight: 600;
   margin: 0 5px;
@@ -54,13 +58,13 @@ header a:hover {
 nav {
   display: flex;
   justify-content: center;
-  background: #002244;
+  background: #0a1730; /* Slightly darker blue */
   padding: 10px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 nav a {
-  color: #ffd700;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   margin: 0 20px;
@@ -68,19 +72,12 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff;
-}
-
-/* Container */
-.container {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
+  color: #ffd700; /* Accent on hover */
 }
 
 /* Sections */
 section {
-  background: #fff;
+  background: #f8f9fb; /* Light gray/white background for contrast */
   padding: 20px 25px;
   margin-bottom: 25px;
   border-radius: 12px;
@@ -88,16 +85,16 @@ section {
 }
 
 h2 {
-  border-left: 5px solid #0055a5;
+  border-left: 5px solid #0d1f3c; /* Dark blue accent */
   padding-left: 12px;
-  color: #003366;
+  color: #0d1f3c;
   margin-bottom: 15px;
   font-size: 1.6em;
 }
 
 h3 {
   margin-top: 10px;
-  color: #002244;
+  color: #0a1730;
   font-size: 1.2em;
 }
 
@@ -122,30 +119,8 @@ ul li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #0055a5;
+  color: #0d1f3c;
   font-weight: bold;
-}
-
-
-/* Profile Photo */
-.profile-pic {
-  width: 250px;         /* Bigger size */
-  height: 250px;        /* Keep it square */
-  border-radius: 50%;   /* Circular */
-  border: 5px solid #ffd700; /* Gold border */
-  margin-bottom: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
-  object-fit: cover;    /* Ensure it fills the box without stretching */
-}
-
-/* Project Images */
-.project-img {
-  max-width: 100%;
-  display: block;
-  margin: 15px auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  border: 2px solid #ddd;
 }
 
 /* Skills Cards */
@@ -156,21 +131,32 @@ ul li::before {
 }
 
 .skill-card {
-  background: #e6f0ff;
+  background: #0d1f3c; /* Dark blue card */
+  color: #ffffff;      /* White text */
   padding: 10px 15px;
   border-radius: 8px;
   font-weight: 600;
-  color: #003366;
   flex: 1 1 120px;
   text-align: center;
+}
+
+/* Project Images */
+.project-img {
+  max-width: 100%;
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  border: 2px solid #0d1f3c;
+  object-fit: cover;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 15px;
-  background: #003366;
-  color: #fff;
+  background: #0d1f3c; /* Dark blue */
+  color: #ffffff;
   margin-top: 30px;
   border-top: 4px solid #ffd700;
   font-size: 0.9em;
