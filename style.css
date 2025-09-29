@@ -1,28 +1,34 @@
-/* Header flex layout */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  color: #0d1f3c;
+  margin: 0;
+  padding: 0;
+}
+
 .header-container {
   display: flex;
-  align-items: flex-start; /* Align top of image with text */
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-  text-align: left;
-  padding-top: 40px; /* Pushes content down a bit */
+  padding: 40px 20px;
+  background: #0d1f3c;
 }
 
-/* Profile photo styling */
 .profile-pic {
-  width: 280px;               /* Larger image */
+  width: 280px;
   height: 280px;
   border-radius: 50%;
-  border: 8px solid #ffffff;  /* Thicker white border */
+  border: 8px solid #ffffff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   object-fit: cover;
-  object-position: top;       /* Show top of the head */
+  object-position: top;
 }
 
-/* Header text info */
 .header-info {
   max-width: 550px;
+  text-align: left;
 }
 
 .header-info h1 {
@@ -34,11 +40,10 @@
 .header-info p {
   color: #ffffff;
   margin-bottom: 10px;
-  line-height: 1.4;
 }
 
 .header-info a {
-  color: #4da6ff; /* Soft blue accent */
+  color: #4da6ff;
   text-decoration: none;
 }
 
@@ -46,7 +51,7 @@
   text-decoration: underline;
 }
 
-/* Responsive for mobile */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
