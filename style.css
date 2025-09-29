@@ -1,165 +1,219 @@
-/* General Reset */
+/* ---------- GLOBAL RESET ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Body Styling */
-body {
-  background-color: #ffffff; /* White background */
-  color: #0a1f44; /* Dark blue text */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;       
+  color: #0d1f3c;            
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
-}
-
-/* Header for Resume Page */
+/* ---------- HEADER ---------- */
 header {
-  text-align: center;
-  margin-bottom: 30px;
+  background: #0d1f3c;       
+  padding: 40px 20px;
 }
 
-/* Name */
-header h1 {
-  font-size: 3rem;
-  color: #0a1f44;
-  margin-bottom: 10px;
+.header-container {
+  display: flex;
+  align-items: center;       /* Vertically center text next to image */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-/* Project Page Header */
-.project-header {
-  background-color: #0a1f44; /* Dark blue background */
-  color: white;              /* White text */
-  font-size: 2.5rem;
-  text-align: center;
-  padding: 20px 0;
-  margin: 0;                 /* Remove extra margin */
+.profile-pic {
+  width: 280px;
+  height: 300px;             /* Slightly taller to include chin */
+  border-radius: 50%;
+  border: 8px solid #ffffff; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  object-fit: cover;
+  object-position: 10% 10%;  /* Moves image slightly down to include chin */
 }
 
+.header-info {
+  max-width: 550px;
+  text-align: center;         /* Center text next to profile image */
+}
 
+.header-info h1 {
+  font-size: 2.8em;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
 
-/* Contact Info */
 .contact-info {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 30px;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
-.contact-info a {
-  color: #0a1f44;
+.header-info a {
+  color: #4da6ff;
   text-decoration: none;
-  margin: 0 10px;
 }
 
-.contact-info a:hover {
+.header-info a:hover {
   text-decoration: underline;
 }
 
-/* Profile Section */
-.profile-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
-  margin-bottom: 40px;
+.objective {
+  margin-top: 12px;
+  color: #ffffff;
+  font-weight: 500;
 }
 
-.profile-container img {
-  width: 200px;
-  height: 220px; /* Adjust to show full head */
-  object-fit: cover;
-  border: 5px solid #0a1f44;
-  border-radius: 10px;
-  margin-top: 20px; /* Moves image slightly down */
-}
-
-/* Info next to Profile */
-.profile-info {
-  flex: 1;
-}
-
-.profile-info h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.profile-info p {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Section Headings */
-h2, h3 {
-  border-bottom: 2px solid #0a1f44;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-/* Lists */
-ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-/* Navigation */
+/* ---------- NAVIGATION ---------- */
 nav {
-  text-align: center;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  background: #0a1730;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 nav a {
-  color: #0a1f44;
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+  font-weight: 600;
+  margin: 0 20px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #4da6ff;
 }
 
-/* Project Images */
-.project-img {
-  width: 100%;
-  max-width: 700px;
-  display: block;
-  margin: 20px auto;
-  border: 3px solid #0a1f44;
-  border-radius: 5px;
+/* ---------- MAIN CONTAINER ---------- */
+.container {
+  flex: 1;
+  max-width: 900px;
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-/* Footer */
+/* ---------- SECTIONS ---------- */
+section {
+  background: #f8f9fb;       
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4da6ff; 
+}
+
+section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 40px;
+}
+
+h2 {
+  border-left: 5px solid #0d1f3c; 
+  padding-left: 12px;
+  color: #0d1f3c;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+}
+
+h3 {
+  margin-top: 10px;
+  color: #0a1730;
+  font-size: 1.2em;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* ---------- LISTS ---------- */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding-left: 15px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0d1f3c;
+  font-weight: bold;
+}
+
+/* ---------- SKILLS / PROFICIENCY CARDS ---------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skill-card {
+  background: #0d1f3c;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  flex: 1 1 120px;
+  text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
-  margin-top: 40px;
-  padding: 10px;
+  padding: 15px;
+  background: #0d1f3c;
   color: #ffffff;
-  background-color: #0a1f44;
-  font-size: 0.9rem;
-  border-radius: 5px;
+  border-top: 4px solid #4da6ff;
+  font-size: 0.9em;
+  margin-top: auto;
 }
 
-/* Responsive Design */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
-  .profile-container {
+  .header-container {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding-top: 20px;
   }
 
-  .profile-container img {
-    margin-top: 0;
+  .profile-pic {
+    width: 220px;
+    height: 240px;
+    border: 6px solid #ffffff;
+  }
+
+  .header-info {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
   }
 
   nav a {
-    display: block;
-    margin: 5px 0;
+    margin: 10px 0;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
   }
 }
