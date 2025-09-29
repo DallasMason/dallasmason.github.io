@@ -1,219 +1,161 @@
-/* ---------- GLOBAL RESET ---------- */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #ffffff;       
-  color: #0d1f3c;            
+/* Body Styling */
+body {
+  background-color: #ffffff; /* White background */
+  color: #0a1f44; /* Dark blue text */
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
 }
 
-/* ---------- HEADER ---------- */
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Header for Resume Page */
 header {
-  background: #0d1f3c;       
-  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;       /* Vertically center text next to image */
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
+/* Name */
+header h1 {
+  font-size: 3rem;
+  color: #0a1f44;
+  margin-bottom: 10px;
 }
 
-.profile-pic {
-  width: 280px;
-  height: 300px;             /* Slightly taller to include chin */
-  border-radius: 50%;
-  border: 8px solid #ffffff; 
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  object-fit: cover;
-  object-position: 10% 10%;  /* Moves image slightly down to include chin */
+/* Project Page Header */
+.project-header {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
 }
 
-.header-info {
-  max-width: 550px;
-  text-align: center;         /* Center text next to profile image */
-}
-
-.header-info h1 {
-  font-size: 2.8em;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
+/* Contact Info */
 .contact-info {
-  color: #ffffff;
-  margin-bottom: 8px;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
 }
 
-.header-info a {
-  color: #4da6ff;
+.contact-info a {
+  color: #0a1f44;
   text-decoration: none;
+  margin: 0 10px;
 }
 
-.header-info a:hover {
+.contact-info a:hover {
   text-decoration: underline;
 }
 
-.objective {
-  margin-top: 12px;
-  color: #ffffff;
-  font-weight: 500;
-}
-
-/* ---------- NAVIGATION ---------- */
-nav {
+/* Profile Section */
+.profile-container {
   display: flex;
-  justify-content: center;
-  background: #0a1730;
-  padding: 12px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 20px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #4da6ff;
-}
-
-/* ---------- MAIN CONTAINER ---------- */
-.container {
-  flex: 1;
-  max-width: 900px;
-  width: 90%;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-/* ---------- SECTIONS ---------- */
-section {
-  background: #f8f9fb;       
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  margin-bottom: 20px;
-  border-bottom: 2px solid #4da6ff; 
-}
-
-section:last-of-type {
-  border-bottom: none;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
   margin-bottom: 40px;
 }
 
-h2 {
-  border-left: 5px solid #0d1f3c; 
-  padding-left: 12px;
-  color: #0d1f3c;
-  margin-bottom: 15px;
-  font-size: 1.6em;
+.profile-container img {
+  width: 200px;
+  height: 220px; /* Adjust to show full head */
+  object-fit: cover;
+  border: 5px solid #0a1f44;
+  border-radius: 10px;
+  margin-top: 20px; /* Moves image slightly down */
 }
 
-h3 {
-  margin-top: 10px;
-  color: #0a1730;
-  font-size: 1.2em;
+/* Info next to Profile */
+.profile-info {
+  flex: 1;
 }
 
-.date {
-  font-size: 0.9em;
-  color: #555;
+.profile-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-/* ---------- LISTS ---------- */
+.profile-info p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Section Headings */
+h2, h3 {
+  border-bottom: 2px solid #0a1f44;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Lists */
 ul {
-  list-style: none;
-  padding-left: 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-ul li {
-  padding-left: 15px;
-  margin-bottom: 8px;
-  position: relative;
+/* Navigation */
+nav {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #0d1f3c;
+nav a {
+  color: #0a1f44;
+  text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
 }
 
-/* ---------- SKILLS / PROFICIENCY CARDS ---------- */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.skill-card {
-  background: #0d1f3c;
-  color: #ffffff;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-weight: 600;
-  flex: 1 1 120px;
-  text-align: center;
+/* Project Images */
+.project-img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #0a1f44;
+  border-radius: 5px;
 }
 
-/* ---------- FOOTER ---------- */
+/* Footer */
 footer {
   text-align: center;
-  padding: 15px;
-  background: #0d1f3c;
+  margin-top: 40px;
+  padding: 10px;
   color: #ffffff;
-  border-top: 4px solid #4da6ff;
-  font-size: 0.9em;
-  margin-top: auto;
+  background-color: #0a1f44;
+  font-size: 0.9rem;
+  border-radius: 5px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .header-container {
+  .profile-container {
     flex-direction: column;
-    text-align: center;
-    padding-top: 20px;
+    align-items: center;
   }
 
-  .profile-pic {
-    width: 220px;
-    height: 240px;
-    border: 6px solid #ffffff;
-  }
-
-  .header-info {
-    max-width: 100%;
-  }
-
-  nav {
-    flex-direction: column;
+  .profile-container img {
+    margin-top: 0;
   }
 
   nav a {
-    margin: 10px 0;
-  }
-
-  .skills {
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    margin: 5px 0;
   }
 }
