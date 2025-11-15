@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dallas Mason - New Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+  
+<!-- HEADER WITH NAME -->
+<header>
+  <div class="header-container">
+    <h1 class="project-header">Dallas Mason</h1>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html">Resume</a>
+  <a href="about.html">About Me</a>
+  <a href="project1.html">Project 1</a>
+  <a href="project2.html">Project 2</a>
+  <a href="project3.html">Project 3</a> <!-- Add as needed -->
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <section>
+    <h2>New Page Title</h2>
+    <img src="images/project_placeholder.jpg" alt="Project Image" class="project-img">
+
+    <p>
+      Replace this text with the content for your new page. You can write about a project, a topic, 
+      or anything else you want to display using the existing layout.
+    </p>
+
+    <h3>Section Header</h3>
+    <ul>
+      <li>List item example</li>
+      <li>Another list item</li>
+    </ul>
+
+    <h3>More Content</h3>
+    <p>
+      Add more paragraphs or images depending on what you want the page to show.
+    </p>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>Dallas Mason</p>
+</footer>
+
+</body>
+</html>
