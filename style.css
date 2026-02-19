@@ -657,3 +657,34 @@ nav a:hover::after {
   margin-right: 15px;
 }
 
+/* Make header relative so absolute positioning works */
+header {
+  position: relative;
+}
+
+/* Top-left logo link */
+.header-logo-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  z-index: 10; /* ensures it sits above other elements */
+}
+
+/* Logo image */
+.header-logo {
+  width: 50px;   /* adjust size */
+  height: 50px;
+  border-radius: 50%; /* optional circle */
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.header-logo-link:hover .header-logo {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
