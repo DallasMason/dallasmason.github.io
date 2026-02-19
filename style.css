@@ -565,3 +565,45 @@ nav a:hover::after {
   background-color: #4da6ff;
 }
 
+#experience-section {
+  background: #f8f9fb;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4da6ff;
+}
+
+#experience-section h2 {
+  border-left: 5px solid #0d1f3c;
+  padding-left: 12px;
+  color: #0d1f3c;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+}
+
+.experience-entry {
+  margin-bottom: 20px;
+}
+
+.experience-entry h3 {
+  color: #0a1730;
+  font-size: 1.2em;
+  margin-bottom: 4px;
+}
+
+.experience-entry .date {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.experience-entry ul {
+  list-style: disc inside;
+  padding-left: 15px;
+}
+
+.experience-entry ul li {
+  margin-bottom: 6px;
+}
+
