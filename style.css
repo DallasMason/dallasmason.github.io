@@ -633,4 +633,19 @@ nav a:hover::after {
   margin-bottom: 6px;
 }
 
+#experience ul {
+  list-style: disc inside; /* normal single bullets */
+  padding-left: 20px;
+}
+
+#experience ul li {
+  position: static;       /* remove the absolute bullet */
+  padding-left: 0;
+  margin-bottom: 6px;
+}
+
+#experience ul li::before {
+  content: none;          /* remove the custom bullet */
+}
+
 
