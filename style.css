@@ -655,12 +655,28 @@ nav a:hover::after {
 }
 
 /* ===== BRAND GLOW COLORS ===== */
-.skill-html { color: #ff6b3d; }
-.skill-css { color: #4da6ff; }
-.skill-java { color: #ff4d4d; }
-.skill-git { color: #ff784d; }
-.skill-linux { color: #ffd24d; }
-.skill-net { color: #66ccff; }
-.skill-sec { color: #66ff99; }
-.skill-sql { color: #4db8ff; }
-.skill-c { color: #a6b3ff; }
+.java{color:#f89820;}
+.c{color:#659ad2;}
+.python{color:#3776ab;}
+
+.html{color:#e34c26;}
+.css{color:#264de4;}
+
+.mysql{color:#00758f;}
+.mongo{color:#4db33d;}
+
+.vscode{color:#007acc;}
+.replit{color:#ff6b35;}
+.eclipse{color:#6f42c1;}
+
+.excel{color:#217346;}
+.word{color:#2b579a;}
+.ppt{color:#d24726;}
+.powershell{color:#5391fe;}
+
+.docs{color:#4285f4;}
+.sheets{color:#0f9d58;}
+.slides{color:#f4b400;}
+
+.net{color:#4da6ff;}
+.sec{color:#00ffaa;}
