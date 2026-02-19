@@ -623,29 +623,28 @@ nav a:hover::after {
   margin-bottom: 6px;
 }
 
-.experience-info ul {
-  list-style: disc inside;  /* standard bullets */
-  padding-left: 20px;       /* space for bullets */
-}
-
-.experience-info ul li {
-  position: static;          /* remove global ::before bullet */
-  margin-bottom: 6px;
-}
-
+/* ---------- EXPERIENCE BULLETS FIX ---------- */
 #experience ul {
-  list-style: disc inside; /* normal single bullets */
-  padding-left: 20px;
+  list-style: none; /* remove default bullets */
+  padding-left: 0;  /* remove indentation */
+  margin: 0;        /* optional: remove extra spacing */
 }
 
 #experience ul li {
-  position: static;       /* remove the absolute bullet */
-  padding-left: 0;
+  position: relative;
+  padding-left: 20px; /* space for custom bullet if you want */
   margin-bottom: 6px;
 }
 
+/* Optional: add a small custom bullet */
 #experience ul li::before {
-  content: none;          /* remove the custom bullet */
+  content: "•";       /* your bullet symbol */
+  position: absolute;
+  left: 0;
+  color: #0d1f3c;     /* bullet color */
+  font-weight: bold;
+}
+
 }
 
 .experience-pic {
