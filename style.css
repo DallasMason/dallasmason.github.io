@@ -37,6 +37,19 @@ header {
   gap: 40px;
 }
 
+/* ---------- HEADER ICONS ---------- */
+.header-info .contact-info a i {
+  font-size: 32px;   /* Make the icons bigger */
+  vertical-align: middle; /* keeps them aligned nicely */
+  margin: 0 8px;     /* spacing between icons */
+  transition: transform 0.3s; /* optional hover effect */
+}
+
+.header-info .contact-info a:hover i {
+  transform: scale(1.2); /* slight zoom on hover */
+}
+
+
 .profile-pic {
   width: 280px;
   height: 300px;
