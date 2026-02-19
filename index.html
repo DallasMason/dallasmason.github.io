@@ -90,12 +90,11 @@
   <p>© Developer Portfolio by Dallas Mason. | 2026</p>
 </footer>
 <script>
-const slider = document.querySelector('.skills-strip');
-
+const slider = document.querySelector('.skills-track');
 let isDown = false;
-let startX;
-let scrollLeft;
+let startX, scrollLeft;
 
+// Desktop drag
 slider.addEventListener('mousedown', e => {
   isDown = true;
   slider.classList.add('active');
@@ -103,63 +102,34 @@ slider.addEventListener('mousedown', e => {
   scrollLeft = slider.scrollLeft;
   slider.style.cursor = 'grabbing';
 });
-
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.style.cursor = 'grab';
-});
-
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.style.cursor = 'grab';
-});
-
+slider.addEventListener('mouseleave', () => isDown = false);
+slider.addEventListener('mouseup', () => isDown = false);
 slider.addEventListener('mousemove', e => {
   if(!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 0.6;
+  const walk = (x - startX) * 0.5; // slower, smoother
   slider.scrollLeft = scrollLeft - walk;
 });
 
-/* MOBILE SWIPE */
+// Mobile swipe
 slider.addEventListener('touchstart', e => {
   startX = e.touches[0].pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
 });
-
 slider.addEventListener('touchmove', e => {
   const x = e.touches[0].pageX - slider.offsetLeft;
-  const walk = (x - startX) * 1.8;
+  const walk = (x - startX) * 0.5;
   slider.scrollLeft = scrollLeft - walk;
 });
-</script>
 
-  <script>
-
-/* ---------- RING PROGRESS ---------- */
-document.querySelectorAll('.skill-bubble').forEach(b=>{
-  let lvl=b.dataset.level;
-  let deg=lvl*3.6;
-  b.querySelector('.ring').style.setProperty('--deg',deg+'deg');
-});
-
-/* ---------- EXPAND CLICK ---------- */
-document.querySelectorAll('.skill-bubble').forEach(b=>{
-  b.onclick=()=>b.classList.toggle('active');
-});
-
-/* ---------- SCROLL REVEAL ---------- */
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add('visible');
-  });
-});
-
-document.querySelectorAll('section').forEach(s=>{
-  s.classList.add('reveal');
-  observer.observe(s);
-});
+// Optional: auto-scroll for infinite effect
+setInterval(() => {
+  slider.scrollLeft += 0.3; // very slow
+  if(slider.scrollLeft >= slider.scrollWidth / 2) {
+    slider.scrollLeft = 0; // reset to create loop illusion
+  }
+}, 20);
 
 </script>
 
