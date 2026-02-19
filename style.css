@@ -459,6 +459,17 @@ nav a:hover::after {
   opacity: 1;
 }
 
+.skills-strip:hover .skills-track {
+  animation-play-state: paused;
+}
+
+.skill-bubble {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#0d1f3c, #0d1f3c) padding-box,
+    linear-gradient(120deg, #4da6ff, #ffffff, #4da6ff) border-box;
+}
+
 /* ===== BRAND GLOW COLORS ===== */
 .skill-html { color: #ff6b3d; }
 .skill-css { color: #4da6ff; }
