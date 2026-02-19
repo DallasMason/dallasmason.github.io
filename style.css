@@ -78,6 +78,18 @@ header {
   font-weight: 500;
 }
 
+.top-left-name {
+  position: fixed;      /* stays in place even when scrolling */
+  top: 10px;
+  left: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d1f3c;      /* dark blue to match theme */
+  z-index: 999;         /* above other elements */
+  pointer-events: none; /* doesn’t interfere with clicks */
+}
+
+
 /* ---------- NAVIGATION ---------- */
 nav {
   display: flex;
