@@ -438,6 +438,24 @@ nav a:hover::after {
   font-size: 32px;
 }
 
+.skills-track {
+  display: flex;
+  gap: 18px;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scrollBubbles 40s linear infinite;
+}
+
+.skills-strip:hover .skills-track {
+  animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes scrollBubbles {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* move half (the first set) */
+}
+
+
 /* Brand colors */
 .java{color:#f89820;}
 .c{color:#659ad2;}
