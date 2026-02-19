@@ -674,8 +674,8 @@ header {
 
 /* Logo image */
 .header-logo {
-  width: 50px;   /* adjust size */
-  height: 50px;
+  width: 200px;   /* adjust size */
+  height: 200px;
   border-radius: 50%; /* optional circle */
   object-fit: cover;
   cursor: pointer;
