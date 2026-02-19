@@ -623,3 +623,14 @@ nav a:hover::after {
   margin-bottom: 6px;
 }
 
+.experience-info ul {
+  list-style: disc inside;  /* standard bullets */
+  padding-left: 20px;       /* space for bullets */
+}
+
+.experience-info ul li {
+  position: static;          /* remove global ::before bullet */
+  margin-bottom: 6px;
+}
+
+
