@@ -459,20 +459,36 @@ nav a:hover::after {
   position:relative;
 }
 
-.skills-track{
-  display:flex;
-  gap:26px;
-  width:max-content;
-  animation:scrollSkills 40s linear infinite;
+.skills-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: hidden; /* hide default scrollbars */
+  padding: 10px 0;
+  cursor: grab;
+  scroll-behavior: smooth;
+  user-select: none;
+  width: 100%;
 }
 
-.skills-strip:hover .skills-track{
-  animation-play-state:paused;
+/* Duplicate bubbles for seamless infinite scroll */
+.skills-track .skill-bubble {
+  flex: 0 0 auto;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  min-width: 80px;
 }
 
-@keyframes scrollSkills{
-  from{ transform:translateX(0); }
-  to{ transform:translateX(-50%); }
+/* Optional hover effect */
+.skills-track .skill-bubble:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+/* Remove ugly scrollbars */
+.skills-track::-webkit-scrollbar {
+  display: none;
 }
 
 /* ---------- GLASS BUBBLE ---------- */
