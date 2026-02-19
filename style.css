@@ -563,47 +563,63 @@ nav a:hover::after {
 
 #contact-form button:hover {
   background-color: #4da6ff;
-}
-
-#experience-section {
-  background: #f8f9fb;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  margin-bottom: 20px;
-  border-bottom: 2px solid #4da6ff;
+}#experience-section {
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
 }
 
 #experience-section h2 {
   border-left: 5px solid #0d1f3c;
   padding-left: 12px;
   color: #0d1f3c;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 1.6em;
 }
 
 .experience-entry {
+  display: flex;
+  gap: 20px;
+  background: #f8f9fb;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   margin-bottom: 20px;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-entry h3 {
-  color: #0a1730;
-  font-size: 1.2em;
-  margin-bottom: 4px;
+.experience-entry:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
 }
 
-.experience-entry .date {
+.experience-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4da6ff;
+  flex-shrink: 0;
+}
+
+.experience-info h3 {
+  margin-bottom: 6px;
+  color: #0d1f3c;
+}
+
+.experience-info .date {
   font-size: 0.9em;
   color: #555;
   margin-bottom: 8px;
 }
 
-.experience-entry ul {
+.experience-info ul {
   list-style: disc inside;
-  padding-left: 15px;
+  padding-left: 0;
 }
 
-.experience-entry ul li {
+.experience-info ul li {
   margin-bottom: 6px;
 }
 
