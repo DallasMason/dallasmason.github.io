@@ -648,4 +648,13 @@ nav a:hover::after {
   content: none;          /* remove the custom bullet */
 }
 
+.experience-pic {
+  width: 80px;     /* smaller for logos */
+  height: 80px;
+  border-radius: 50%;  /* optional if you want round logos */
+  object-fit: cover;
+  border: 2px solid #4da6ff;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
 
