@@ -654,6 +654,28 @@ nav a:hover::after {
   padding: 35px 10px 45px 10px;
 }
 
+.skills-track {
+  display: flex;
+  gap: 10px; /* space between bubbles */
+  overflow-x: auto; /* allows horizontal scrolling */
+  padding: 10px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.skills-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-track::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.skill-bubble {
+  flex: 0 0 auto; /* prevents bubbles from shrinking */
+}
+
 /* ===== BRAND GLOW COLORS ===== */
 .java{color:#f89820;}
 .c{color:#659ad2;}
