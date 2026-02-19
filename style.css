@@ -389,3 +389,83 @@ nav a:hover::after {
   }
 }
 
+/* ===== SKILLS STRIP ===== */
+.skills-strip {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.skills-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollSkills 25s linear infinite;
+}
+
+@keyframes scrollSkills {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ===== BUBBLES ===== */
+.skill-bubble {
+  min-width: 130px;
+  height: 130px;
+  background: #0d1f3c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-weight: 600;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  animation: floatBubble 4s ease-in-out infinite;
+}
+
+@keyframes floatBubble {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.skill-bubble:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.skill-bubble i {
+  font-size: 34px;
+}
+
+/* ===== TOOLTIP ===== */
+.skill-bubble::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -38px;
+  background: #0d1f3c;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.25s ease;
+}
+
+.skill-bubble:hover::after {
+  opacity: 1;
+}
+
+/* ===== BRAND GLOW COLORS ===== */
+.skill-html { color: #ff6b3d; }
+.skill-css { color: #4da6ff; }
+.skill-java { color: #ff4d4d; }
+.skill-git { color: #ff784d; }
+.skill-linux { color: #ffd24d; }
+.skill-net { color: #66ccff; }
+.skill-sec { color: #66ff99; }
+.skill-sql { color: #4db8ff; }
+.skill-c { color: #a6b3ff; }
