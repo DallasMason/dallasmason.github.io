@@ -341,153 +341,111 @@ nav a:hover::after {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* ---------- SKILLS SCROLL STRIP ---------- */
-.skills-strip {
+/* ---------- SKILLS WRAPPER ---------- */
+.skills-wrapper {
+  position: relative;
   overflow: hidden;
-  width: 100%;
-  padding: 15px 0;
+  padding: 40px 0;
 }
 
+/* ---------- PARTICLE BG ---------- */
+.skills-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#4da6ff22 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: moveParticles 50s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveParticles {
+  from { background-position: 0 0; }
+  to { background-position: 400px 400px; }
+}
+
+/* ---------- STRIP ---------- */
+.skills-strip {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-strip::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- TRACK ---------- */
 .skills-track {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   width: max-content;
-  animation: scrollSkills 25s linear infinite;
+  padding: 10px 30px;
 }
 
-/* pause animation on hover */
-.skills-strip:hover .skills-track {
-  animation-play-state: paused;
-}
-
-/* square bubble */
+/* ---------- BUBBLES ---------- */
 .skill-bubble {
   min-width: 120px;
   height: 120px;
-  background: #0d1f3c;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.skill-bubble:hover {
-  transform: scale(1.08);
-}
-
-/* animation */
-@keyframes scrollSkills {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* ===== SKILLS STRIP ===== */
-.skills-strip {
-  overflow: hidden;
-  width: 100%;
-  padding: 20px 0;
-}
-
-.skills-track {
-  display: flex;
-  gap: 20px;
-  animation: scrollSkills 25s linear infinite;
-}
-
-@keyframes scrollSkills {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* ===== BUBBLES ===== */
-.skill-bubble {
-  min-width: 130px;
-  height: 130px;
-  background: #0d1f3c;
+  background:
+    linear-gradient(#0d1f3c,#0d1f3c) padding-box,
+    linear-gradient(120deg,#4da6ff,#ffffff,#4da6ff) border-box;
+  border: 2px solid transparent;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 18px;
-  font-weight: 600;
   gap: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  font-weight: 600;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+  animation: floatBubble 7s ease-in-out infinite;
   position: relative;
-  animation: floatBubble 4s ease-in-out infinite;
 }
 
+/* Reduced float */
 @keyframes floatBubble {
   0%,100% { transform: translateY(0); }
-  20% { transform: translateY(-6px); }
+  50% { transform: translateY(-3px); }
 }
 
 .skill-bubble:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
 }
 
 .skill-bubble i {
-  font-size: 34px;
+  font-size: 30px;
 }
 
-/* ===== TOOLTIP ===== */
+/* ---------- TOOLTIP ---------- */
 .skill-bubble::after {
-  content: attr(data-tooltip);
+  content: attr(data-desc);
   position: absolute;
-  bottom: -38px;
+  bottom: -34px;
   background: #0d1f3c;
-  color: white;
   padding: 6px 10px;
   border-radius: 6px;
   font-size: 12px;
   opacity: 0;
   white-space: nowrap;
-  transition: opacity 0.25s ease;
+  transition: 0.3s;
 }
 
 .skill-bubble:hover::after {
   opacity: 1;
 }
 
-.skills-strip:hover .skills-track {
-  animation-play-state: paused;
-}
-
-.skill-bubble {
-  border: 2px solid transparent;
-  background:
-    linear-gradient(#0d1f3c, #0d1f3c) padding-box,
-    linear-gradient(120deg, #4da6ff, #ffffff, #4da6ff) border-box;
-}
-
-.skills-bg {
-  position: absolute;
-  width: 100%;
-  height: 220px;
-  background-image: radial-gradient(#4da6ff22 1px, transparent 1px);
-  background-size: 30px 30px;
-  animation: moveParticles 40s linear infinite;
-  z-index: 0;
-}
-
-@keyframes moveParticles {
-  from { background-position: 0 0; }
-  to { background-position: 300px 300px; }
-}
-
-.skills-strip {
-  position: relative;
-  z-index: 1;
+/* ---------- MOBILE ---------- */
+@media (max-width:768px){
+  .skill-bubble{
+    min-width:100px;
+    height:100px;
+  }
 }
 
 
