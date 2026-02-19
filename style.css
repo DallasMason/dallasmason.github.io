@@ -341,3 +341,51 @@ nav a:hover::after {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* ---------- SKILLS SCROLL STRIP ---------- */
+.skills-strip {
+  overflow: hidden;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.skills-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollSkills 25s linear infinite;
+}
+
+/* pause animation on hover */
+.skills-strip:hover .skills-track {
+  animation-play-state: paused;
+}
+
+/* square bubble */
+.skill-bubble {
+  min-width: 120px;
+  height: 120px;
+  background: #0d1f3c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.skill-bubble:hover {
+  transform: scale(1.08);
+}
+
+/* animation */
+@keyframes scrollSkills {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
