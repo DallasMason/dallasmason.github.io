@@ -382,321 +382,82 @@ nav a:hover::after {
   display: none;
 }
 
-/* ---------- TRACK ---------- */
-.skills-track {
-  display: flex;
-  gap: 24px;
-  width: max-content;
-  padding: 10px 30px;
+/* ---------- SKILLS STRIP ---------- */
+.skills-strip {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 25px 10px;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch; /* smooth on mobile */
 }
 
-/* ---------- BUBBLES ---------- */
+/* Hide default scrollbars */
+.skills-strip::-webkit-scrollbar {
+  height: 6px;
+}
+.skills-strip::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+.skills-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Track that holds bubbles */
+.skills-track {
+  display: flex;
+  gap: 18px;
+  flex-wrap: nowrap; /* single row */
+  width: max-content;
+}
+
+/* Glass bubbles */
 .skill-bubble {
   min-width: 120px;
   height: 120px;
-  background:
-    linear-gradient(#0d1f3c,#0d1f3c) padding-box,
-    linear-gradient(120deg,#4da6ff,#ffffff,#4da6ff) border-box;
-  border: 2px solid transparent;
-  color: white;
+  background: rgba(13,31,60,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  color: white;
   font-weight: 600;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: 0.3s ease;
-  animation: floatBubble 7s ease-in-out infinite;
-  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Reduced float */
-@keyframes floatBubble {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
-}
-
+/* Hover effect */
 .skill-bubble:hover {
-  transform: translateY(-6px) scale(1.04);
+  transform: translateY(-6px) scale(1.05);
   box-shadow: 0 12px 25px rgba(0,0,0,0.3);
 }
 
 .skill-bubble i {
-  font-size: 30px;
+  font-size: 32px;
 }
 
-/* ---------- TOOLTIP ---------- */
-.skill-bubble::after {
-  content: attr(data-desc);
-  position: absolute;
-  bottom: -34px;
-  background: #0d1f3c;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  opacity: 0;
-  white-space: nowrap;
-  transition: 0.3s;
-}
-
-.skill-bubble:hover::after {
-  opacity: 1;
-}
-
-/* ---------- MOBILE ---------- */
-@media (max-width:768px){
-  .skill-bubble{
-    min-width:100px;
-    height:100px;
-  }
-}
-
-/* ---------- INFINITE FLOAT STRIP ---------- */
-.skills-strip{
-  overflow:hidden;
-  position:relative;
-}
-
-.skills-track {
-  display: flex;
-  gap: 10px;
-  overflow-x: hidden; /* hide default scrollbars */
-  padding: 10px 0;
-  cursor: grab;
-  scroll-behavior: smooth;
-  user-select: none;
-  width: 100%;
-}
-
-/* Duplicate bubbles for seamless infinite scroll */
-.skills-track .skill-bubble {
-  flex: 0 0 auto;
-  background: #f3f3f3;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  min-width: 80px;
-}
-
-/* Optional hover effect */
-.skills-track .skill-bubble:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s;
-}
-
-/* Remove ugly scrollbars */
-.skills-track::-webkit-scrollbar {
-  display: none;
-}
-
-/* ---------- GLASS BUBBLE ---------- */
-.skill-bubble{
-  min-width:130px;
-  height:130px;
-  backdrop-filter: blur(10px);
-  background: rgba(13,31,60,0.8);
-  border-radius:22px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  color:white;
-  position:relative;
-  cursor:pointer;
-  animation:floatBubble 6s ease-in-out infinite;
-  transition:.3s;
-}
-
-@keyframes floatBubble{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-4px);}
-}
-
-.skill-bubble:hover{
-  transform:scale(1.08);
-}
-
-/* ---------- ICON ---------- */
-.skill-bubble i{
-  font-size:34px;
-  z-index:2;
-}
-
-/* ---------- RING ---------- */
-.ring{
-  position:absolute;
-  inset:8px;
-  border-radius:50%;
-  background:conic-gradient(#4da6ff var(--deg), #ffffff22 0);
-  mask: radial-gradient(circle, transparent 60%, black 61%);
-  opacity:.7;
-}
-
-/* ---------- COLOR GLOW ---------- */
-.skill-bubble.java{box-shadow:0 0 18px #f89820;}
-.skill-bubble.c{box-shadow:0 0 18px #659ad2;}
-.skill-bubble.html{box-shadow:0 0 18px #e34c26;}
-.skill-bubble.css{box-shadow:0 0 18px #264de4;}
-.skill-bubble.mysql{box-shadow:0 0 18px #00758f;}
-.skill-bubble.powershell{box-shadow:0 0 18px #5391fe;}
-.skill-bubble.asm{box-shadow:0 0 18px #aaaaaa;}
-.skill-bubble.net{box-shadow:0 0 18px #4da6ff;}
-.skill-bubble.sec{box-shadow:0 0 18px #00ffaa;}
-
-/* ---------- EXPAND CARD ---------- */
-.skill-bubble.active{
-  transform:scale(1.25);
-  z-index:10;
-}
-
-/* ---------- SECTION TITLE ANIM ---------- */
-.section-title{
-  position:relative;
-}
-
-.section-title::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:-6px;
-  width:0;
-  height:3px;
-  background:#4da6ff;
-  animation:underline 2s ease forwards;
-}
-
-@keyframes underline{
-  to{width:80px;}
-}
-
-/* ---------- SCROLL REVEAL ---------- */
-.reveal{
-  opacity:0;
-  transform:translateY(30px);
-  transition:1s;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* ---------- SKILLS STRIP ---------- */
-.skills-strip{
-  overflow:hidden;
-  padding:30px 0;
-}
-
-.skills-track{
-  display:flex;
-  gap:24px;
-  width:max-content;
-  animation:scrollSkills 35s linear infinite;
-}
-
-.skills-strip:hover .skills-track{
-  animation-play-state:paused;
-}
-
-@keyframes scrollSkills{
-  from{ transform:translateX(0); }
-  to{ transform:translateX(-50%); }
-}
-
-/* ---------- SKILL BUBBLES ---------- */
-.skill-bubble{
-  min-width:120px;
-  height:120px;
-  background:rgba(13,31,60,0.85);
-  backdrop-filter:blur(8px);
-  border-radius:18px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  color:white;
-  font-weight:600;
-  animation:floatBubble 6s ease-in-out infinite;
-  transition:.25s;
-}
-
-@keyframes floatBubble{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-4px);}
-}
-
-.skill-bubble:hover{
-  transform:translateY(-6px);
-}
-
-/* ---------- ICON COLORS ---------- */
-.skill-bubble i{
-  font-size:32px;
-}
-
+/* Brand colors */
 .java{color:#f89820;}
 .c{color:#659ad2;}
+.python{color:#3776ab;}
 .html{color:#e34c26;}
 .css{color:#264de4;}
 .mysql{color:#00758f;}
+.mongo{color:#4db33d;}
+.vscode{color:#007acc;}
+.replit{color:#ff6b35;}
+.eclipse{color:#6f42c1;}
+.excel{color:#217346;}
+.word{color:#2b579a;}
+.ppt{color:#d24726;}
 .powershell{color:#5391fe;}
-.asm{color:#bbbbbb;}
+.docs{color:#4285f4;}
+.sheets{color:#0f9d58;}
+.slides{color:#f4b400;}
 .net{color:#4da6ff;}
 .sec{color:#00ffaa;}
-
-/* ---------- MOBILE ---------- */
-@media (max-width:768px){
-  .skill-bubble{
-    min-width:100px;
-    height:100px;
-  }
-}
-
-/* ---------- SKILLS SECTION SIZE FIX ---------- */
-#skills-section{
-  max-width: 1200px;     /* Wider sides */
-  width: 95%;
-  margin: 40px auto;
-  padding: 40px 30px;    /* Taller top/bottom */
-}
-
-/* Extra breathing room for scrolling strip */
-.skills-strip{
-  padding: 35px 10px 45px 10px;
-}
-
-.skills-track {
-  display: flex;
-  flex-wrap: nowrap;         /* keep bubbles in a single line */
-  overflow-x: auto;          /* enable horizontal scroll */
-  gap: 10px;                 /* spacing between bubbles */
-  padding: 10px;
-  max-width: 100%;           /* prevents overflow off page */
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-.skills-track::-webkit-scrollbar {
-  height: 6px;
-}
-
-.skills-track::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 3px;
-}
-
-.skill-bubble {
-  flex: 0 0 auto;           /* keeps bubble size fixed */
-}
-
-.skill-bubble {
-  flex: 0 0 auto; /* prevents bubbles from shrinking */
-}
 
 /* ===== BRAND GLOW COLORS ===== */
 .java{color:#f89820;}
