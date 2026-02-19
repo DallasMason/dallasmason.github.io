@@ -176,5 +176,34 @@ slider.addEventListener('touchmove', e => {
 });
 </script>
 
+  <script>
+
+/* ---------- RING PROGRESS ---------- */
+document.querySelectorAll('.skill-bubble').forEach(b=>{
+  let lvl=b.dataset.level;
+  let deg=lvl*3.6;
+  b.querySelector('.ring').style.setProperty('--deg',deg+'deg');
+});
+
+/* ---------- EXPAND CLICK ---------- */
+document.querySelectorAll('.skill-bubble').forEach(b=>{
+  b.onclick=()=>b.classList.toggle('active');
+});
+
+/* ---------- SCROLL REVEAL ---------- */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+});
+
+document.querySelectorAll('section').forEach(s=>{
+  s.classList.add('reveal');
+  observer.observe(s);
+});
+
+</script>
+
+
 </body>
 </html>
