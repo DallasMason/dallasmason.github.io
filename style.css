@@ -636,6 +636,19 @@ nav a:hover::after {
   }
 }
 
+/* ---------- SKILLS SECTION SIZE FIX ---------- */
+#skills-section{
+  max-width: 1200px;     /* Wider sides */
+  width: 95%;
+  margin: 40px auto;
+  padding: 40px 30px;    /* Taller top/bottom */
+}
+
+/* Extra breathing room for scrolling strip */
+.skills-strip{
+  padding: 35px 10px 45px 10px;
+}
+
 /* ===== BRAND GLOW COLORS ===== */
 .skill-html { color: #ff6b3d; }
 .skill-css { color: #4da6ff; }
