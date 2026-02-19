@@ -417,7 +417,7 @@ nav a:hover::after {
 .skills-track {
   display: flex;
   gap: 20px;
-  animation: scrollSkills 25s linear infinite;
+  animation: scrollSkills 15s linear infinite;
 }
 
 @keyframes scrollSkills {
