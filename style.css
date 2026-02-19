@@ -448,6 +448,121 @@ nav a:hover::after {
   }
 }
 
+/* ---------- INFINITE FLOAT STRIP ---------- */
+.skills-strip{
+  overflow:hidden;
+  position:relative;
+}
+
+.skills-track{
+  display:flex;
+  gap:26px;
+  width:max-content;
+  animation:scrollSkills 40s linear infinite;
+}
+
+.skills-strip:hover .skills-track{
+  animation-play-state:paused;
+}
+
+@keyframes scrollSkills{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+/* ---------- GLASS BUBBLE ---------- */
+.skill-bubble{
+  min-width:130px;
+  height:130px;
+  backdrop-filter: blur(10px);
+  background: rgba(13,31,60,0.8);
+  border-radius:22px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:white;
+  position:relative;
+  cursor:pointer;
+  animation:floatBubble 6s ease-in-out infinite;
+  transition:.3s;
+}
+
+@keyframes floatBubble{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-4px);}
+}
+
+.skill-bubble:hover{
+  transform:scale(1.08);
+}
+
+/* ---------- ICON ---------- */
+.skill-bubble i{
+  font-size:34px;
+  z-index:2;
+}
+
+/* ---------- RING ---------- */
+.ring{
+  position:absolute;
+  inset:8px;
+  border-radius:50%;
+  background:conic-gradient(#4da6ff var(--deg), #ffffff22 0);
+  mask: radial-gradient(circle, transparent 60%, black 61%);
+  opacity:.7;
+}
+
+/* ---------- COLOR GLOW ---------- */
+.skill-bubble.java{box-shadow:0 0 18px #f89820;}
+.skill-bubble.c{box-shadow:0 0 18px #659ad2;}
+.skill-bubble.html{box-shadow:0 0 18px #e34c26;}
+.skill-bubble.css{box-shadow:0 0 18px #264de4;}
+.skill-bubble.mysql{box-shadow:0 0 18px #00758f;}
+.skill-bubble.powershell{box-shadow:0 0 18px #5391fe;}
+.skill-bubble.asm{box-shadow:0 0 18px #aaaaaa;}
+.skill-bubble.net{box-shadow:0 0 18px #4da6ff;}
+.skill-bubble.sec{box-shadow:0 0 18px #00ffaa;}
+
+/* ---------- EXPAND CARD ---------- */
+.skill-bubble.active{
+  transform:scale(1.25);
+  z-index:10;
+}
+
+/* ---------- SECTION TITLE ANIM ---------- */
+.section-title{
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:#4da6ff;
+  animation:underline 2s ease forwards;
+}
+
+@keyframes underline{
+  to{width:80px;}
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
 
 /* ===== BRAND GLOW COLORS ===== */
 .skill-html { color: #ff6b3d; }
