@@ -87,35 +87,48 @@
   <p>© Developer Portfolio by Dallas Mason. | 2026</p>
 </footer>
 <script>
-const track = document.querySelector('.skills-track');
+const slider = document.querySelector('.skills-strip');
 
 let isDown = false;
 let startX;
 let scrollLeft;
 
-track.addEventListener('mousedown', (e) => {
+slider.addEventListener('mousedown', e => {
   isDown = true;
-  track.style.cursor = 'grabbing';
-  startX = e.pageX - track.offsetLeft;
-  scrollLeft = track.scrollLeft;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+  slider.style.cursor = 'grabbing';
 });
 
-track.addEventListener('mouseleave', () => {
+slider.addEventListener('mouseleave', () => {
   isDown = false;
-  track.style.cursor = 'grab';
+  slider.style.cursor = 'grab';
 });
 
-track.addEventListener('mouseup', () => {
+slider.addEventListener('mouseup', () => {
   isDown = false;
-  track.style.cursor = 'grab';
+  slider.style.cursor = 'grab';
 });
 
-track.addEventListener('mousemove', (e) => {
+slider.addEventListener('mousemove', e => {
   if(!isDown) return;
   e.preventDefault();
-  const x = e.pageX - track.offsetLeft;
-  const walk = (x - startX) * 2;
-  track.scrollLeft = scrollLeft - walk;
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 1.8;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+/* MOBILE SWIPE */
+slider.addEventListener('touchstart', e => {
+  startX = e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchmove', e => {
+  const x = e.touches[0].pageX - slider.offsetLeft;
+  const walk = (x - startX) * 1.8;
+  slider.scrollLeft = scrollLeft - walk;
 });
 </script>
 
