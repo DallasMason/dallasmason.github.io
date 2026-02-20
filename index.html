@@ -205,25 +205,27 @@
   <p>© Developer Portfolio by Dallas Mason. | 2026</p>
 </footer>
 
-<button id="backToTop">↑</button>
+<button id="scrollTopBtn">↑</button>
+
 <script>
-  const btn = document.getElementById("backToTop");
+  const scrollBtn = document.getElementById("scrollTopBtn");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
-      btn.classList.add("show");
+      scrollBtn.classList.add("show");
     } else {
-      btn.classList.remove("show");
+      scrollBtn.classList.remove("show");
     }
   });
 
-  btn.addEventListener("click", () => {
+  scrollBtn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   });
 </script>
+
 
 </body>
 </html>
