@@ -738,36 +738,41 @@ html {
   flex-direction: column;
   justify-content: center;
 
-/* ===== SCROLL TO TOP BUTTON ===== */
+/* ===== SCROLL TO TOP BUTTON FIX ===== */
 #scrollTopBtn {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+
+  width: 55px !important;
+  height: 55px !important;
+  min-width: 55px !important;
+  max-width: 55px !important;
+
+  border-radius: 50% !important;
   border: none;
   background: #0d1f3c;
   color: white;
   font-size: 24px;
   cursor: pointer;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 
-  /* hidden by default */
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 9999;
 }
 
-#scrollTopBtn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-}
-
-/* visible state */
 #scrollTopBtn.show {
   opacity: 1;
   visibility: visible;
 }
 
+#scrollTopBtn:hover {
+  transform: translateY(-4px);
+}
