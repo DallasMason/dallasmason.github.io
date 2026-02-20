@@ -738,8 +738,8 @@ html {
   flex-direction: column;
   justify-content: center;
 
-  /* ===== BACK TO TOP BUTTON ===== */
-#backToTop {
+/* ===== SCROLL TO TOP BUTTON ===== */
+#scrollTopBtn {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -749,26 +749,25 @@ html {
   border: none;
   background: #0d1f3c;
   color: white;
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+  /* hidden by default */
   opacity: 0;
-  pointer-events: none;
+  visibility: hidden;
   transition: all 0.3s ease;
   z-index: 999;
 }
 
-#backToTop:hover {
+#scrollTopBtn:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.35);
 }
 
 /* visible state */
-#backToTop.show {
+#scrollTopBtn.show {
   opacity: 1;
-  pointer-events: auto;
+  visibility: visible;
 }
-
-}
-
 
