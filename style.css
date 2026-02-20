@@ -778,3 +778,14 @@ html {
 #scrollTopBtn:hover {
   transform: translateY(-4px);
 }
+
+/* ===== EXPERIENCE / EDUCATION / CERT LOGO ===== */
+.exp-logo {
+  width: 80px;
+  height: 80px;
+  min-width: 80px; /* prevents flex shrink */
+  border-radius: 50%;
+  object-fit: cover; /* crops image into circle */
+  border: 3px solid #0d1f3c;
+  background: #fff;
+}
